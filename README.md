@@ -10,7 +10,7 @@ vue+element-ui+nodeJs+mysql
 
 > 前台展示页面
 
-![](.\assets\home.jpg)
+![](./assets/home.jpg)
 
 - 用户：登录 注册 退出
 - 首页：文章列表(分页)、文章分类、置顶文章
