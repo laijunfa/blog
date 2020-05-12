@@ -6,7 +6,11 @@ vue+element-ui+nodeJs+mysql
 
 ## 实现的功能
 
+
+
 > 前台展示页面
+
+![](E:\个人博客\myblogs\assets\home.jpg)
 
 - 用户：登录 注册 退出
 - 首页：文章列表(分页)、文章分类、置顶文章
@@ -21,6 +25,8 @@ vue+element-ui+nodeJs+mysql
 > 用户管理
 > 留言管理
 > 题库管理
+
+![](E:\个人博客\myblogs\assets\admin.jpg)
 
 ### 技术选型
 
