@@ -1,0 +1,152 @@
+.bx {
+  width : 1200px;
+  margin: 0 auto;
+}
+
+.home {
+  .main {
+    display        : flex;
+    justify-content: space-between;
+
+    /* background-color: white; */
+    .main_left {
+      width: 850px;
+
+      .el-menu-demo {
+        margin-bottom: 5px;
+        .el-menu-item{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .carousel {
+    // width     : 100%;
+    // margin    : 0 auto;
+    margin-top   : 10px;
+    height       : 280px;
+    border-radius: 8px;
+
+    img {
+      border-radius: 8px;
+      opacity      : 0.8;
+    }
+  }
+
+  //文章
+  .section {
+    // margin-top: 20px;
+    article {
+      height          : 200px;
+      padding         : 20px;
+      margin-bottom   : 15px;
+      background-color: white;
+      position        : relative;
+
+      .article_title a {
+        font-size: 18px;
+        color    : #555;
+        cursor   : pointer;
+      }
+      
+      .article_title a:hover {
+        color: #00a8ff;
+      }
+      .article_title{
+        span{
+          padding-left: 10px;
+          color: red;
+          font-size: 15px;
+        }
+      }
+      .article_left,
+      .article_right {
+        color: #777;
+
+        img {
+          width : 200px;
+          height: 120px;
+          float : left;
+          margin: 0 10px;
+        }
+      }
+
+      .article_right {
+        .detail {
+          padding    : 10px;
+          margin-left: 10px;
+          line-height: 1.8em;
+          height     : 85px;
+          // 多行文本省略号
+          display           : -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          overflow          : hidden;
+        }
+      }
+
+      >div.article_bottom {
+        position       : absolute;
+        bottom         : 20px;
+        left           : 0px;
+        width          : 100%;
+        display        : flex;
+        justify-content: space-between;
+        color          : #777;
+        font-size      : 12px;
+
+        >div {
+          >span {
+            margin-left: 20px;
+            img {
+              vertical-align: middle;
+              margin-right  : 5px;
+              width         : 16px;
+              height        : 14px;
+            }
+          }
+          >span:hover {
+            color : #45B6F7;
+            cursor: pointer;
+          }
+        }
+
+        //阅读全文
+        >a {
+          margin-right: 20px;
+          color       : #096;
+        }
+
+        >a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    article:hover {
+      background-color: #f9f9f9;
+      position: relative;
+      z-index: 2;
+      transform: translateY(2px);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+      transition: all linear 200ms;
+    }
+  }
+
+  .el-carousel__item h3 {
+    color      : #475669;
+    font-size  : 18px;
+    opacity    : 0.75;
+    line-height: 300px;
+    margin     : 0;
+  }
+
+  .el-carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+  }
+
+  .el-carousel__item:nth-child(2n + 1) {
+    background-color: #d3dce6;
+  }
+
+}

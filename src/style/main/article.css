@@ -1,0 +1,71 @@
+#articleInfo {
+  width: 1250px;
+  margin: 20px auto;
+}
+#articleInfo .main {
+  display: flex;
+  justify-content: space-between;
+}
+#articleInfo .main > article {
+  padding: 10px 20px;
+  background: #fff;
+  width: 900px;
+}
+#articleInfo .main > article .article_hd {
+  height: 80px;
+  border-bottom: 1px solid #eaeaea;
+}
+#articleInfo .main > article .article_hd .article_title {
+  height: 50px;
+  line-height: 50px;
+  color: #555;
+}
+#articleInfo .main > article .article_hd .article_title a:hover {
+  color: #45B6F7;
+  cursor: pointer;
+}
+#articleInfo .main > article .article_hd .details {
+  font-size: 12px;
+}
+#articleInfo .main > article .article_hd .details span {
+  padding: 0 10px;
+  display: inline-block;
+}
+#articleInfo .main > article .article_hd .details span img {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+}
+#articleInfo .main > article .article_hd .details span:hover {
+  color: #45B6F7;
+  cursor: pointer;
+}
+#articleInfo .main > article .article_hd .details .operation {
+  display: inline-block;
+}
+#articleInfo .main > article .article_hd .details .operation span {
+  color: #45B6F7;
+}
+#articleInfo .main > article .article_content {
+  margin-top: 10px;
+  line-height: 25px;
+}
+#articleInfo .accept {
+  position: fixed;
+  top: 300px;
+  left: 50px;
+}
+#articleInfo .accept .like {
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  background: #fff url('../../assets//img//article/like.png') no-repeat center;
+  background-size: 50%;
+}
+#articleInfo .accept .like:hover {
+  background: #fff url('../../assets//img//article/like_red.png') no-repeat center;
+  background-size: 50%;
+}

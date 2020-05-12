@@ -1,0 +1,28 @@
+#message {
+  width: 1200px;
+  margin: 20px auto;
+}
+#message .main {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: white; */
+}
+#message .main .message_board {
+  width: 820px;
+  padding: 20px;
+  height: 100%;
+  background-color: #fff;
+}
+#message .main .message_board .notice .sendword {
+  padding: 20px;
+}
+#message .main .message_board .notice .sendword img {
+  width: 100%;
+  border-radius: 2px;
+}
+#message .main .message_board .notice .comments {
+  border-radius: 5px;
+}
+#message .main .message_board .notice .el-divider--horizontal {
+  margin: 15px 0;
+}

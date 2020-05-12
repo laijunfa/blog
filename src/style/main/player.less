@@ -1,0 +1,248 @@
+.music{
+    width: 100%;
+    height: 800px;
+    position: relative;
+    background-color: rgb(129, 160, 192);
+    // overflow: hidden;
+}
+.player_bg,.player_mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.player_bg{
+    background-image: url(https://y.gtimg.cn/music/photo_new/T001R300x300M000004N12zE1PwvUN.jpg?max_age=2592000);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    opacity: 0.5;
+    filter: blur(65px);
+}
+.player_mask{
+    background-color: rgba(0,0,0,.3);
+    z-index:5;
+}
+.player{
+    position: absolute;
+    top: 60px;
+    left: 100px;
+    width: 1300px;
+    z-index: 10;
+    // height: 100%;
+    height: 1000px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: poppin,Tahoma,Arial,\5FAE\8F6F\96C5\9ED1,sans-serif;
+
+    // 工具栏
+    .song_toolbar{
+        >span{
+            display: inline-block;
+            width: 122px;
+            height: 38px;
+            border: 1px solid #c9c9c9;
+            text-align: center;
+            line-height: 38px;
+            margin-left: 10px;
+            color: #fff;
+        }
+        >span:hover{
+            color: #fff;
+            border: 1px solid #fff;
+            cursor: pointer;
+        }
+    }
+
+    .player_bd{
+        display: flex;
+        justify-content: space-between;
+        //歌曲列表
+        .song_list {
+            width: 800px;
+            height: 500px;
+            margin-top: 30px;
+            border: 1px solid red;
+            overflow: auto;
+            >li{
+                height: 50px;
+                line-height: 50px;
+                border-top: 1px solid rgba(255, 255, 255,0.1);
+                display: flex;
+                span{
+                    display: inline-block;
+                }
+                .item_num{
+                    width: 35px;
+                    height: 50px;
+                    padding-left: 10px;
+                }
+                .item_num_bg{
+                    background: url('../../assets/img/player/wave.gif') no-repeat center;
+                }
+                .song_name{
+                    position: relative;
+                    width: 55%;
+                    .icon_menu_list{
+                        position: absolute;
+                        right: 20px;
+                        top: 0px;
+                        width:200px;
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        // border:1px solid skyblue;
+                        >span{
+                            width: 36px;
+                            height: 36px;
+                            margin-right: 10px;
+                            // border: 1px solid red;
+                            background-image: url('../../assets/img/sprite/icon_list_menu.png');
+                            background-repeat: no-repeat;
+                        }
+                        span:hover{
+                            cursor: pointer;
+                        }
+                        //播放
+                        span.icon-play{
+                            background-position:-80px 0px;
+                        }
+                        span.icon-pause{
+                            background-position:-80px -200px;
+                        }
+                        span.icon-play:hover{
+                            background-position:-120px 0px;
+                        }
+                        //添加到歌单
+                        span.icon-add{
+                            background-position:-80px -80px;
+                        }
+                        span.icon-add:hover{
+                            background-position:-120px -80px;
+                        }
+                        //下载
+                        span.icon-download{
+                            background-position:-80px -120px;
+                        }
+                        span.icon-download:hover{
+                            background-position:-120px -120px;
+                        }
+                        //删除
+                        span.icon-delete{
+                            background-position:-80px -160px;
+                        }
+                        span.icon-delete:hover{
+                            background-position:-120px -160px;
+                        }
+                    }
+                }
+                .song_singer{
+                    width: 25%;
+                }
+            }
+        }
+        //歌曲详情
+        .song_info{
+            width: 340px;
+            height: 280px;
+            border: 1px solid red;
+            text-align: center;
+            .song_album{
+                padding: 10px 0;
+                img{
+                    width: 180px;
+                    height: 180px;
+                }
+            }
+            >p{
+                padding: 10px 0;
+            }
+            .song_lyric{
+                margin-top: 40px;
+            }
+        }
+    }
+    .player_fd{
+        width: 1300px;
+        height: 100px;
+        border: 1px solid red;
+        margin-top: 50px;
+        .player_music{
+            display: flex;
+            align-items: center;
+            >a{
+                display: inline-block;
+                background-image: url('../../assets/img/player/playericon.png');
+                background-repeat: no-repeat;
+            }
+            .prev_btn,.next_btn{
+                width: 19px;
+                height: 21px;
+            }
+            .play_btn{
+                width: 21px;
+                height: 29px;
+                margin: 0 50px;
+                background-position: 0 0;
+            }
+            .pause_btn{
+                width: 21px;
+                height: 29px;
+                margin: 0 50px;
+                background-position: -30px 0;
+            }
+            .prev_btn{
+                background-position: 0 -30px;
+            }
+            .next_btn{
+                background-position: 0 -52px;
+            }
+            //音乐详情
+            .player_music_info{
+                width: 650px;
+                margin: 0px 50px;
+                display: inline-block;
+                display: flex;
+                flex-direction: column;
+                .info_top{
+                    display: flex;
+                    justify-content: space-between;
+                }
+                //播放进度
+                .info_bottom{
+                    position: relative;
+                    height: 10px;
+                    width: 100%;
+                    margin-top: 8px;
+                    // background-color:skyblue;
+                    //小圆点
+                    .progress_dot{
+                        position: absolute;
+                        top: 1px;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background-color: #fff;
+                    }
+                    //进度条
+                    .music_progress{
+                        position: absolute;
+                        top: 4px;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: rgba(255,255,255,.2);
+                    }
+                }
+            }
+            //声音
+            .voice{
+                width: 26px;
+                height: 21px;
+                background-position: 0 -145px;
+            }
+            
+        }
+    }
+}

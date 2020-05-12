@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //创建webSocket 连接服务器
+    let ws=new WebSocket('wss://echo.websocket.org')
+    //2 设置连接成功的回调函数
+    ws.onopen=function (evy){
+      console.log('建立连接成功');
+      ws.send('hello websocket')
+    }
+    // 客户端接收消息
+    ws.onmessage=function(evt){
+      console.log('客户端接收到的消息',evt.data);
+      ws.close();
+    }
+    ws.onclose=function(){
+      console.log('连接关闭')
+    }
+  </script>
+</body>
+</html>
