@@ -26,7 +26,7 @@ vue+element-ui+nodeJs+mysql
 > 留言管理
 > 题库管理
 
-![](.\assets\admin.jpg)
+![](./assets/admin.jpg)
 
 ### 技术选型
 
