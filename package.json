@@ -19,7 +19,7 @@
     "hls.js": "^0.13.2",
     "jsonwebtoken": "^8.5.1",
     "less-loader": "^5.0.0",
-    "marked": "^0.8.2",
+    "marked": "^4.0.10",
     "mavon-editor": "^2.8.3",
     "md5": "^2.2.1",
     "moment": "^2.24.0",
